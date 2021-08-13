@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TwitterStockSentimentAnalyzer", "TwitterStockSentimentAnalyzer.pyproj", "{867F3A59-F97B-4B3D-89BC-D988AA3EECDD}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "InvestmentAnalysisPlatform", "InvestmentAnalysisPlatform.pyproj", "{867F3A59-F97B-4B3D-89BC-D988AA3EECDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

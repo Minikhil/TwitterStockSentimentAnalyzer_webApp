@@ -10,6 +10,8 @@ from flask_wtf import FlaskForm
 from wtforms import Form, StringField, PasswordField, validators
 from wtforms.validators import DataRequired
 from TwitterStockSentimentAnalyzer import app
+from TwitterStockSentimentAnalyzer.TwitterAnalyzer import TwitterAnalyzer
+import os
 
 app.config['SECRET_KEY'] = "tothemoon"
 class TickerInput(FlaskForm):
@@ -33,11 +35,15 @@ def home():
     #)
     if form.validate_on_submit():
       ticker = form.ticker.data
+      data = TwitterAnalyzer(ticker)
+      path = os.path.dirname(os.path.realpath(__file__))
+      imagedir = '/'.join([path,'static/images/plotGraph.png'])
       return render_template(
             'contact.html',
             title= ticker,
             today = today,
-            message='Analysis:'
+            message='Analysis:',
+            url = imagedir
     )
     return render_template(
         'index.html',
