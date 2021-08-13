@@ -45,6 +45,7 @@ class TwitterAnalyzer:
         allWords = ''.join([twts for twts in df['Tweets']])
         self.getWordCloud(allWords)
         self.getPlotGraph(df,ticker)
+        self.getBarGraph(df,ticker)
         print(df)
 
     #Create a function to clean the tweets
@@ -103,6 +104,7 @@ class TwitterAnalyzer:
         plt.xlabel('Sentiment')
         plt.ylabel('Counts')
         df['Analysis'].value_counts().plot(kind='bar')
+        plt.savefig(imagedir)
         
 
 

@@ -57,6 +57,7 @@
     <Content Include="TwitterStockSentimentAnalyzer\static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="TwitterStockSentimentAnalyzer\static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="TwitterStockSentimentAnalyzer\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="TwitterStockSentimentAnalyzer\static\images\barGraph.png" />
     <Content Include="TwitterStockSentimentAnalyzer\static\images\plotGraph.png">
       <SubType>Code</SubType>
     </Content>
