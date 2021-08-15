@@ -40,7 +40,7 @@ def home():
       path = os.path.dirname(os.path.realpath(__file__))
       imagedirList = ["/static/images/wordCloud.png"+"?"+str(today) ,"/static/images/plotGraph.png"+"?"+str(today), "/static/images/barGraph.png"+"?"+str(today)]
       return render_template(
-            'contact.html',
+            'analysisResults.html',
             title= ticker.split("$")[1],
             today = today,
             message='Analysis:',

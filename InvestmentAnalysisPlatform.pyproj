@@ -78,7 +78,7 @@
     <Content Include="TwitterStockSentimentAnalyzer\static\scripts\respond.min.js" />
     <Content Include="TwitterStockSentimentAnalyzer\static\scripts\_references.js" />
     <Content Include="TwitterStockSentimentAnalyzer\templates\about.html" />
-    <Content Include="TwitterStockSentimentAnalyzer\templates\contact.html" />
+    <Content Include="TwitterStockSentimentAnalyzer\templates\analysisResults.html" />
     <Content Include="TwitterStockSentimentAnalyzer\templates\index.html" />
     <Content Include="TwitterStockSentimentAnalyzer\templates\layout.html" />
     <Content Include="TwitterStockSentimentAnalyzer\templates\plotGraph1.png" />

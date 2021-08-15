@@ -101,7 +101,7 @@ class TwitterAnalyzer:
         for i in range(0,df.shape[0]):
             plt.scatter(df['Polarity'][i], df['Subjectivity'][i], color = 'Blue')
 
-        plt.title('Sentiment Analysis '+ ticker)
+        plt.title('Polarity & Subjectivity Analysis '+ ticker)
         plt.xlabel('Polarity')
         plt.ylabel('Subjectivity')
         plt.tight_layout()
