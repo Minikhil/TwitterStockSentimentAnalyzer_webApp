@@ -22,7 +22,8 @@ class TickerInput(FlaskForm):
 def home():
     """Renders the home page."""
     ticker = None
-    today = datetime.today(),
+    now = datetime.now()
+    today = datetime.timestamp(now)
     form = TickerInput()
     form.validate()
     #if form.is_submitted():
@@ -37,13 +38,13 @@ def home():
       ticker = form.ticker.data
       data = TwitterAnalyzer(ticker)
       path = os.path.dirname(os.path.realpath(__file__))
-      imagedir = '/'.join([path,'static/images/plotGraph.png'])
+      imagedirList = ["/static/images/wordCloud.png"+"?"+str(today) ,"/static/images/plotGraph.png"+"?"+str(today), "/static/images/barGraph.png"+"?"+str(today)]
       return render_template(
             'contact.html',
             title= ticker,
             today = today,
             message='Analysis:',
-            url = imagedir
+            url = imagedirList
     )
     return render_template(
         'index.html',

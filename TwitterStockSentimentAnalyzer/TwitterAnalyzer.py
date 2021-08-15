@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 plt.style.use('fivethirtyeight')
 import os
 from configparser import ConfigParser
+from datetime import datetime
 
 class TwitterAnalyzer:
     """description of class"""
@@ -73,10 +74,18 @@ class TwitterAnalyzer:
         else:
             return 'Positive'
 
+    def getFileName(self, name):
+        path = os.path.dirname(os.path.realpath(__file__))
+        now = datetime.now()
+        timestamp = datetime.timestamp(now)
+        imagedir = '/'.join([path,'static/images/'+ name +'.png'])
+        return imagedir
+
     def getWordCloud(self, allWords):
         wordCloud =  WordCloud(width = 1000, height = 600, random_state= 21, max_font_size = 200).generate(allWords)
         path = os.path.dirname(os.path.realpath(__file__))
-        imagedir = '/'.join([path,'static/images/wordCloud.png'])
+        #imagedir = '/'.join([path,'static/images/wordCloud.png'])
+        imagedir = self.getFileName('wordCloud')
         print(imagedir)
         wordCloud.to_file(imagedir)
         #plt.savefig(imagedir)
@@ -85,7 +94,8 @@ class TwitterAnalyzer:
         #plot the polarity and subjectivity 
         plt.figure(figsize=(8,6))
         path = os.path.dirname(os.path.realpath(__file__))
-        imagedir = '/'.join([path,'static/images/plotGraph.png'])
+        #imagedir = '/'.join([path,'static/images/plotGraph.png'])
+        imagedir = self.getFileName('plotGraph')
         print(imagedir)
         #print(os.listdir(imagedir))
         for i in range(0,df.shape[0]):
@@ -98,7 +108,8 @@ class TwitterAnalyzer:
 
     def getBarGraph(self,df,ticker):
         path = os.path.dirname(os.path.realpath(__file__))
-        imagedir = '/'.join([path,'static/images/barGraph.png'])
+        #imagedir = '/'.join([path,'static/images/barGraph.png'])
+        imagedir = self.getFileName('barGraph')
         df['Analysis'].value_counts()
         plt.title('Sentiment Analysis ' + ticker)
         plt.xlabel('Sentiment')
