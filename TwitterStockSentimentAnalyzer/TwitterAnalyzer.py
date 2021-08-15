@@ -104,6 +104,7 @@ class TwitterAnalyzer:
         plt.title('Sentiment Analysis '+ ticker)
         plt.xlabel('Polarity')
         plt.ylabel('Subjectivity')
+        plt.tight_layout()
         plt.savefig(imagedir)
 
     def getBarGraph(self,df,ticker):
@@ -115,6 +116,7 @@ class TwitterAnalyzer:
         plt.xlabel('Sentiment')
         plt.ylabel('Counts')
         df['Analysis'].value_counts().plot(kind='bar')
+        plt.tight_layout()
         plt.savefig(imagedir)
         
 
