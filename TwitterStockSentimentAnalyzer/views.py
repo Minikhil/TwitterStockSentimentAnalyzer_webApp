@@ -41,7 +41,7 @@ def home():
       imagedirList = ["/static/images/wordCloud.png"+"?"+str(today) ,"/static/images/plotGraph.png"+"?"+str(today), "/static/images/barGraph.png"+"?"+str(today)]
       return render_template(
             'contact.html',
-            title= ticker,
+            title= ticker.split("$")[1],
             today = today,
             message='Analysis:',
             url = imagedirList
