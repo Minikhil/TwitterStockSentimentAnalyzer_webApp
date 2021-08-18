@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="TwitterStockSentimentAnalyzer\" />
+    <Folder Include="TwitterStockSentimentAnalyzer\.ebextensions\" />
     <Folder Include="TwitterStockSentimentAnalyzer\static\" />
     <Folder Include="TwitterStockSentimentAnalyzer\static\content\" />
     <Folder Include="TwitterStockSentimentAnalyzer\static\fonts\" />
@@ -47,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="TwitterStockSentimentAnalyzer\.ebextensions\python.config">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="TwitterStockSentimentAnalyzer\config.ini">
       <SubType>Code</SubType>
     </Content>

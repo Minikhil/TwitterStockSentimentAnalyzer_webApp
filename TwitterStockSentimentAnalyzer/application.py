@@ -3,6 +3,6 @@ The flask application package.
 """
 
 from flask import Flask
-app = Flask(__name__)
+application = Flask(__name__)
 
 import TwitterStockSentimentAnalyzer.views
