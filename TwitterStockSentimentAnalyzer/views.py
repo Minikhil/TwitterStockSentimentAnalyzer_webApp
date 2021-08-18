@@ -20,7 +20,7 @@ class TickerInput(FlaskForm):
 @app.route('/', methods =['GET', 'POST'])
 @app.route('/home', methods =['GET', 'POST'])
 def home():
-    """Renders the home page."""
+    """Renders the home page. """
     ticker = None
     now = datetime.now()
     today = datetime.timestamp(now)
